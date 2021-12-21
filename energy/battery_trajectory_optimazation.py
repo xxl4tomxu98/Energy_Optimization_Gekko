@@ -17,6 +17,8 @@ Gekko such as [t]. Here is a simplified model:
 from gekko import GEKKO
 import numpy as np
 import matplotlib.pyplot as plt
+
+m       = GEKKO()
 # horizon
 m.time  = np.linspace(0,3,4)
 # data vectors
