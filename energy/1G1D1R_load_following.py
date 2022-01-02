@@ -4,8 +4,8 @@ The first benchmark problem represents load following, a common scenario in grid
 The optimizer seeks to match demand and supply with fluctuating demand dynamics. 
 A single generator with ramping constraints attempts to respond to a single load with 
 perfect foresight. The generation and demand match initially, but the generator must ramp
-in order to ensure this throughout the horizon while minimizing overproduction.
-
+in order to ensure this throughout the horizon while minimizing overproduction. There
+is no energy storage in this application, every load demand is matched by generation.
 Individual case studies include ramp rate constraints, power production, and energy storage
 operation as design variables. Variables used in the benchmark problems are defined below.
 
