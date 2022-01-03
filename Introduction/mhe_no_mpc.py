@@ -1,9 +1,9 @@
 """
 Objective: Implement MHE with an without Model Predictive Control (MPC). 
 Describe the difference between tracking performance (agreement between model 
-and measured values) and predictive performance (model parameters that predict 
-into the future). Tune the estimator to improve control performance. 
-Show how overly aggressive tracking performance may degrade the control 
+and measured values, MHE) and predictive performance (model parameters that 
+predict into the future, MPC). Tune the estimator to improve control performance. 
+Show how overly aggressive tracking(estimating) performance may degrade the control 
 performance even though the estimator performance (difference between measured 
 and modeled output) is acceptable. An overly aggressive estimator may give 
 different parameter values (K and tau) for each cycle.
@@ -16,9 +16,10 @@ constant to unique values between 1 and 10. For example, the gain is 5.0 and
 the time constant is 10.0 in the Simulink model below in Laplace form as 
 (5/10s+1). There are three models in this exercise including the process, 
 the estimator, and the controller. The first part of the exercise is to tune 
-just the estimator. While an estimator can be well tuned to track measured values, 
-it may be undesirable to have large parameter variations that are passed with 
-each cycle to a model predictive controller.
+just the estimator(MHE without MPC). While an estimator can be well tuned to 
+track measured values, it may be undesirable to have large parameter variations
+that are passed with each cycle to a model predictive controller.
+
 Observe the estimator performance as new measurements arrive. Is the estimator 
 able to reconstruct the unmeasured model parameters from the input and output data?
 """

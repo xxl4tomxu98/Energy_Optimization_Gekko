@@ -38,7 +38,7 @@ a.STATUS=1; b.STATUS=1; c.STATUS=1; d.STATUS=1
 m.Equations([y==x.dt(),z==y.dt()])
 m.Equation(z.dt()==a*z+b*y+c*x+d) # differential equation
 
-m.options.IMODE = 5   # dynamic estimation
+m.options.IMODE = 5   # dynamic estimation(MHE)
 m.options.NODES = 3   # collocation nodes
 m.solve(disp=False)   # display solver output
 print(a.value[0],b.value[0],c.value[0],d.value[0])
