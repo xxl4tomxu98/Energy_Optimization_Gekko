@@ -1,6 +1,6 @@
 """
 Objective: Understand the effect of bad data on dynamic optimization algorithms including 
-estimator and control performance. Create a MATLAB or Python script to simulate and 
+estimator and control performance. Create a Python script to simulate and 
 display the results. The flowrate of mud and cuttings is especially important with managed
 pressure drilling (MPD) in order to detect gas influx or fluid losses. There are a range 
 of measurement instruments for flow such as a mass flow meter or Coriolis flow meter 
@@ -13,7 +13,7 @@ and d is a disturbance.
 Determine the effect of bad data (outliers, drift, and noise) on estimators such 
 as moving horizon estimation. There is no need to design the estimators for this problem. 
 The estimator scripts are below with sections that can be added to simulate the 
-effect of bad data1. Only an outlier has been added to these code. The code should be 
+effect of bad data. Only an outlier has been added to these code. The code should be 
 modified to include other common phenomena such as measurement drift 
 (gradual ramp away from the true value) and an increase in noise (random fluctuations). 
 Comment on the effect of corrupted data on real-time estimation and why some methods 
