@@ -19,6 +19,7 @@ my revenue. I try to determine the optimal schedule with the following model:
 
 from gekko import GEKKO
 import numpy as np
+import matplotlib.pyplot as plt
 
 m       = GEKKO(remote=False)
 m.time  = np.linspace(0,5,6)
@@ -66,3 +67,22 @@ print('Storage In')
 print(storage_in.value)
 print('Storage')
 print(storage.value)
+
+# ploting the results
+plt.subplot(3,1,1)
+plt.plot(m.time,storage.value,'b--',label='State of Storage')
+plt.ylabel('Apple Storage')
+plt.legend()
+plt.subplot(3,1,2)
+plt.plot(m.time,demand.value,'r--',label='Demand')
+plt.plot(m.time,orchard.value,'k:',label='Apple Harvest')
+plt.legend()
+plt.subplot(3,1,3)
+plt.plot(m.time,storage_in.value,'g--',label='save in storage')
+plt.plot(m.time,storage_out.value,'r:',label='take out of storage')
+plt.plot(m.time,sell.value,'k--',label='Sell to Market')
+plt.plot(m.time,sell.value,':',color='orange',label='Buy from Market')
+plt.ylabel('Apple')
+plt.legend()
+plt.xlabel('Time')
+plt.show()
