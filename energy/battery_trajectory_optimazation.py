@@ -20,11 +20,11 @@ import matplotlib.pyplot as plt
 
 m       = GEKKO()
 # horizon
-m.time  = np.linspace(0,3,4)
+m.time  = np.linspace(0,4,5)
 # data vectors
-EP      = m.Param([0.1,0.05,0.2,0.25])
-Dem     = m.Param([10,12,9,8])
-PV      = m.Param([10,11,8,10])
+EP      = m.Param([0.1,0.05,0.2,0.25,0.15])
+Dem     = m.Param([10,12,9,8,11])
+PV      = m.Param([10,11,8,10,9])
 # constants
 bat_cap = 13.5
 ch_eff  = 0.94
@@ -36,10 +36,10 @@ Pbat_ch.STATUS  = 1
 Pbat_dis = m.MV(lb=0, ub=4)
 Pbat_dis.DCOST  = 0
 Pbat_dis.STATUS = 1
-Pgrid_in = m.MV(lb=0, ub=3)    
+Pgrid_in = m.MV(lb=0, ub=5)    
 Pgrid_in.DCOST  = 0
 Pgrid_in.STATUS = 1
-Pgrid_out = m.MV(lb=0, ub=3) 
+Pgrid_out = m.MV(lb=0, ub=5) 
 Pgrid_out.DCOST  = 0
 Pgrid_out.STATUS = 1
 #State of Charge Battery
